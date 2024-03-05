@@ -55,26 +55,26 @@ export default function Sidebar() {
   ]
 
   return <div className="fixed flex flex-col gap-4 w-[300px] min-w-[300px] border-r min-h-screen p-4">
-  <div>
-    <UserItem />
-  </div>
-  <div className="grow">
-    <Command style={{ overflow: 'visible' }}>
-      <CommandList style={{ overflow: 'visible' }}>
-        {menuList.map((menu: any, key: number) => (
-          <CommandGroup key={key} heading={menu.group}>
-            {menu.items.map((option: any, optionKey: number) =>
-              <CommandItem key={optionKey} className="flex gap-2 cursor-pointer">
-                {option.icon}
-                {option.text}
-              </CommandItem>
-            )}
-          </CommandGroup>
-        ))}
-      </CommandList>
-    </Command>
+    <div>
+      <UserItem />
+    </div>
+    <div className="grow">
+      <Command style={{ overflow: 'visible' }}>
+        <CommandList style={{ overflow: 'visible' }}>
+          {menuList.map((menu: any, key: number) => (
+            <CommandGroup key={key} heading={menu.group}>
+              {menu.items.map((option: any, optionKey: number) =>
+                <CommandItem key={optionKey} className="flex gap-2 cursor-pointer">
+                  {option.icon}
+                  {option.text}
+                </CommandItem>
+              )}
+            </CommandGroup>
+          ))}
+        </CommandList>
+      </Command>
 
-  </div>
-  <div>Settings / Notifications</div>
-</div>;
+    </div>
+    <div>Settings / Notifications</div>
+  </div>;
 }
